@@ -1,0 +1,13 @@
+PODS:
+  - MBProgressHUD (0.9.1)
+  - SDCycleScrollView (1.3)
+
+DEPENDENCIES:
+  - MBProgressHUD
+  - SDCycleScrollView
+
+SPEC CHECKSUMS:
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  SDCycleScrollView: 90e43636fcc8e6a7f74e8b64d87418a8e96549b4
+
+COCOAPODS: 0.39.0
