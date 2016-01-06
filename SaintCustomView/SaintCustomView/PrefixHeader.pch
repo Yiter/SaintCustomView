@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  SaintCustomView
+//
+//  Created by wl on 16/1/6.
+//  Copyright © 2016年 saint. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// 随机色
+#define  randomColor RGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#define  RGBColor(_R,_G,_B) [UIColor colorWithRed:_R/255.0f green:_G/255.0f blue:_B/255.0f alpha:1]
+
+#define mainWidth [UIScreen mainScreen].bounds.size.width
+#define mainHeight [UIScreen mainScreen].bounds.size.height
+
+#endif /* PrefixHeader_pch */

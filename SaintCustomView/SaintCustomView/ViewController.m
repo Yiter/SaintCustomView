@@ -10,6 +10,7 @@
 #import "SaintAlertView.h"
 #import "SaintActionSheet.h"
 #import "SaintInputView.h"
+#import "MenuVC.h"
 
 @interface ViewController ()
 @property (nonatomic,strong)SaintInputView *inputView;
@@ -38,12 +39,15 @@
     //inputView
     [self creatBtnWithTag:2 andTitle:@"CustomInputView"];
     
+    //其他自定义View与工具类
+    [self creatBtnWithTag:3 andTitle:@"Others"];
+    
 }
 -(UIButton *)creatBtnWithTag:(NSInteger)tag andTitle:(NSString *)title{
     CGFloat marginTop =100;
     CGFloat ww =[UIScreen mainScreen].bounds.size.width;
     UIButton *btn =[[UIButton alloc]initWithFrame:CGRectMake((ww-200)/2, marginTop+70*tag, 200, 40)];
-    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn setTitleColor:randomColor forState:UIControlStateNormal];
     [btn setTitle:title forState:UIControlStateNormal];
     btn.tag=tag;
     [btn addTarget:self action:@selector(btnOnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -64,6 +68,10 @@
         [sheet show];
     }else if (tag==2){
         [self showInputViewType1];
+    }else if (tag==3){
+        MenuVC *menuVC =[[MenuVC alloc]init];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:menuVC];
+        [self presentViewController:nav animated:YES completion:nil];
     }
 }
 
